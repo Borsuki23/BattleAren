@@ -4,7 +4,7 @@ public class Bullet {
     private double x, y;
     private final double dx, dy;
     private final int SPEED = 6;
-    private final int SIZE = 10;
+    private final int SIZE = 15;
 
     private final Rectangle hitbox = new Rectangle();
 

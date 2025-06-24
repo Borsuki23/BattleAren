@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 
 public class Enemy {
     private int x, y, speed = 2;
-    private final int WIDTH = 64, HEIGHT = 64;
+    private final int WIDTH = 32, HEIGHT = 32;
     private final Rectangle hitbox = new Rectangle();
 
     private BufferedImage[][] animations;
@@ -26,7 +26,7 @@ public class Enemy {
             BufferedImage sheet = ImageIO.read(new File("assets/enemy.png"));
             for (int dir = 0; dir < 4; dir++) {
                 for (int i = 0; i < 4; i++) {
-                    animations[dir][i] = sheet.getSubimage(i * 128, dir * 128, 128, 128);
+                    animations[dir][i] = sheet.getSubimage(i * 32, dir * 32, 32, 32);
                 }
             }
         } catch (IOException e) {
